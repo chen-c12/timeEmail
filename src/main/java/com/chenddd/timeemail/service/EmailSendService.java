@@ -16,7 +16,7 @@ public interface EmailSendService extends IService<EmailSend> {
      * @param email
      * @return
      */
-    Result addEmail(String email);
+    Result addEmail(String email,String code);
 
     /**
      * 删除邮箱用户
@@ -32,5 +32,7 @@ public interface EmailSendService extends IService<EmailSend> {
      */
     Result selectByEmail(String email);
 
+
+    Result sendCode(String email);
 }
 

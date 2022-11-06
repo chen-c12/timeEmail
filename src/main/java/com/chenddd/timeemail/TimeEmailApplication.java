@@ -7,7 +7,6 @@ import org.springframework.scheduling.annotation.EnableScheduling;
 
 @SpringBootApplication
 @EnableScheduling //这个注解代表开启对定时任务的支持，重要
-@MapperScan("com.chenddd.timeemail.dao")
 public class TimeEmailApplication {
 
     public static void main(String[] args) {

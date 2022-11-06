@@ -33,41 +33,6 @@
 #    　　（20）0 15 10 ? * 6L    每月的最后一个星期五上午10:15触发
 #    　　（21）0 15 10 ? * 6L 2002-2005   2002年至2005年的每月的最后一个星期五上午10:15触发
 #    　　（22）0 15 10 ? * 6#3   每月的第三个星期五上午10:15触发
-#配置定时任务执行时间(cron表达式)
-#schedules:
-#  runBatch:  0 12 * * ?
-server:
-  port: 8888
-
 spring:
-  #邮箱基本配置
-  #邮箱配置发送验证码
-  mail:
-    host: smtp.qq.com
-    protocol: smtp
-    default-encoding: UTF-8
-    username: 2690541998@qq.com
-    password: ydmhbkxikwtedcjc
-    test-connection: true
-    properties:
-      mail:
-        smtp:
-          auth: true
-          starttls:
-            enable: true
-            required: true
-
-  application:
-    name: service-hosp
-  datasource:
-    driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://124.220.198.6:3306/mail_send?characterEncoding=utf-8&useSSL=false
-    username: root
-    password: 123456
-
-  jackson:
-    date-format: yyyy-MM-dd HH:mm:ss
-    time-zone: GMT+8
-
-mybatis-plus:
-  mapper-locations: classpath*:**/xml/*.xml
+  profiles:
+    active: prod

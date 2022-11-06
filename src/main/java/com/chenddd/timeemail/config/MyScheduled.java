@@ -1,6 +1,6 @@
 package com.chenddd.timeemail.config;
 
-import com.chenddd.timeemail.common.SendEmail;
+import com.chenddd.timeemail.common.email.SendEmail;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Component;
 

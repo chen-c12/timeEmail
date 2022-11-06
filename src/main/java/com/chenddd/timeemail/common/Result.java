@@ -68,6 +68,29 @@ public class Result<T> {
         return build(data, ResultCodeEnum.FAIL);
     }
 
+
+    /**
+     * 管理员登录失败
+     * @param data
+     * @param <T>
+     * @return
+     */
+    public static<T> Result<T> failLogin(T data){
+        Result<T> result = build(data);
+        return build(data, ResultCodeEnum.LOGIN_FALL);
+    }
+
+    /**
+     * 管理员登录成功
+     * @param data
+     * @param <T>
+     * @return
+     */
+    public static<T> Result<T> successLogin(T data){
+        Result<T> result = build(data);
+        return build(data, ResultCodeEnum.LOGIN_SUCCESS);
+    }
+
     public Result<T> message(String msg){
         this.setMessage(msg);
         return this;

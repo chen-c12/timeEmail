@@ -1,4 +1,4 @@
-package com.chenddd.timeemail.common;
+package com.chenddd.timeemail.common.email;
 
 import com.chenddd.timeemail.entity.EmailSend;
 import com.chenddd.timeemail.service.EmailSendService;
