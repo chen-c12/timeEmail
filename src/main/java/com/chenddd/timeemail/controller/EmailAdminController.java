@@ -14,7 +14,7 @@ import java.util.List;
  * @author makejava
  * @since 2022-10-28 20:18:59
  */
-@CrossOrigin
+@CrossOrigin(allowedHeaders = "*")
 @RestController
 @RequestMapping("/emailAdmin")
 public class EmailAdminController{

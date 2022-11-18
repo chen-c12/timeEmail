@@ -53,6 +53,7 @@ public class Result<T> {
         return build(data, ResultCodeEnum.SUCCESS);
     }
 
+
     public static<T> Result<T> fail(){
         return Result.fail(null);
     }

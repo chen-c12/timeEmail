@@ -4,7 +4,6 @@ import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.chenddd.timeemail.common.Result;
 import com.chenddd.timeemail.common.email.EmailCode;
-import com.chenddd.timeemail.common.email.SendEmail;
 import com.chenddd.timeemail.common.ValidateCodeUtils;
 import com.chenddd.timeemail.dao.EmailSendDao;
 import com.chenddd.timeemail.entity.EmailSend;

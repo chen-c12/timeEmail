@@ -1,6 +1,6 @@
 package com.chenddd.timeemail.controller;
 
-import com.chenddd.timeemail.common.EmailCheck;
+import com.chenddd.timeemail.common.email.EmailCheck;
 import com.chenddd.timeemail.common.Result;
 import com.chenddd.timeemail.service.EmailSendService;
 import org.springframework.beans.factory.annotation.Autowired;

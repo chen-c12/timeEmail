@@ -1,10 +1,9 @@
 package com.chenddd.timeemail.service.impl;
 
-import cn.dev33.satoken.stp.StpUtil;
 import com.baomidou.mybatisplus.core.conditions.query.LambdaQueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
-import com.chenddd.timeemail.common.EmailCheck;
+import com.chenddd.timeemail.common.email.EmailCheck;
 import com.chenddd.timeemail.common.Result;
 import com.chenddd.timeemail.common.admin.AdminSearch;
 import com.chenddd.timeemail.dao.EmailAdminDao;
@@ -12,15 +11,14 @@ import com.chenddd.timeemail.entity.EmailAdmin;
 import com.chenddd.timeemail.entity.EmailSend;
 import com.chenddd.timeemail.service.EmailAdminService;
 import com.chenddd.timeemail.service.EmailSendService;
+import com.chenddd.timeemail.utils.JwtUtil;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 import java.util.List;
-
 /**
  * (EmailAdmin)表服务实现类
- *
- * @author makejava
+ * @author chenddd
  * @since 2022-10-28 20:19:07
  */
 @Service("emailAdminService")
@@ -43,8 +41,8 @@ public class EmailAdminServiceImpl extends ServiceImpl<EmailAdminDao, EmailAdmin
     public Result login(String adminUser, String password) {
         Long id = adminSearch.getOneAdmin(adminUser, password);
         if (adminSearch.getAdmin(adminUser,password)){
-            StpUtil.login(id);
-           return Result.successLogin("登录成功");
+            String token = JwtUtil.createToken(id, password);
+            return Result.successLogin(token);
         }else {
            return Result.failLogin("账号或密码错误");
         }

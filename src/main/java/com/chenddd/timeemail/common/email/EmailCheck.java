@@ -1,4 +1,4 @@
-package com.chenddd.timeemail.common;
+package com.chenddd.timeemail.common.email;
 
 import org.springframework.stereotype.Component;
 
