@@ -19,6 +19,7 @@ import javax.annotation.Resource;
 @RestController
 //跨域
 @CrossOrigin
+@RequestMapping("/email")
 public class EmailSendController{
     @Autowired
     private EmailSendService emailSendService;

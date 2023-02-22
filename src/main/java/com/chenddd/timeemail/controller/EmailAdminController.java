@@ -16,7 +16,7 @@ import java.util.List;
  */
 @CrossOrigin(allowedHeaders = "*")
 @RestController
-@RequestMapping("/emailAdmin")
+@RequestMapping("/email/emailAdmin")
 public class EmailAdminController{
     @Resource
     private EmailAdminService emailAdminService;
